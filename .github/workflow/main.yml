@@ -1,0 +1,22 @@
+
+Adhul
+Wed, Apr 15, 11:27 PM (11 hours ago)
+to me, willoffire2006, JAGAN, Deni, Farhan, JAGANNATH
+
+name: Docker Build Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t my-app:v1.0 .
